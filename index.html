@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="unduhan.jpeg">
+    <title>Antoni Steven Sirande | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scroll-bar"></div>
+
+    <!-- Canvas Partikel -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <!-- NAV -->
+    <header id="main-header">
+        <nav>
+            <div class="logo">Antoni<span class="dot">.</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                <li><a href="#projects" class="nav-link">Project</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="nav-extras">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero reveal">
+        <div class="hero-container">
+            <div class="hero-image-wrap">
+                <div class="img-ring-outer"></div>
+                <div class="img-ring-inner"></div>
+                <img src="unduhan.jpeg" alt="Antoni Steven Sirande" class="profile-img">
+                <div class="img-badge"><i class="fa-solid fa-code"></i></div>
+            </div>
+            <div class="hero-content">
+                <div class="greeting-tag">👋 Halo, selamat datang!</div>
+                <h1 class="hero-name">Antoni<br><span class="name-accent">Steven Sirande</span></h1>
+                <div class="typing-wrapper">
+                    <span class="typing-prefix">Saya seorang </span>
+                    <span id="typing-text" class="typing-highlight"></span><span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-desc">Mahasiswa Teknik Informatika yang berfokus pada pengembangan sistem web efisien, optimasi hardware, dan analisis data. Mengubah ide kompleks menjadi antarmuka yang interaktif.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Tahun Pengalaman</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Project Selesai</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Teknologi</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Lihat Project</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <span>Hubungi Saya</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll ke bawah</span>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+        <div class="section-title">
+            <span class="section-label">01 — Tentang</span>
+            <h2>Kenali Saya <span class="italic-accent">Lebih Dekat</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-container">
+            <div class="about-image-side">
+                <div class="about-img-frame">
+                    <img src="unduhan.jpeg" alt="Antoni Steven Sirande" class="about-img">
+                    <div class="about-img-decor"></div>
+                </div>
+                <div class="about-card-float glass-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Teknik Informatika</strong>
+                        <span>Aktif Semester 8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <p class="about-intro">Saya adalah <strong>asisten dosen dan laboratorium</strong> untuk Pemrograman Web dan Manajemen Jaringan, dengan dedikasi tinggi dalam menciptakan solusi digital yang kreatif dan fungsional.</p>
+                <p class="about-body">Selain <em>coding</em>, saya tertarik pada optimasi performa perangkat keras dan menikmati estetika visual yang sering menginspirasi desain saya.</p>
+
+                <div class="skills-section">
+                    <h4 class="skills-title">Keahlian Teknis</h4>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span><i class="fa-brands fa-html5"></i> HTML/CSS/JS</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span><i class="fa-brands fa-php"></i> PHP & MySQL</span>
+                                <span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="skill-pct">72%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span><i class="fa-solid fa-network-wired"></i> Networking</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-tags">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">Cisco Packet Tracer</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience reveal">
+        <div class="section-title">
+            <span class="section-label">02 — Pengalaman</span>
+            <h2>Perjalanan <span class="italic-accent">Karir</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal-child">
+                <div class="timeline-connector">
+                    <div class="tl-dot"><i class="fa-solid fa-chalkboard-teacher"></i></div>
+                    <div class="tl-line"></div>
+                </div>
+                <div class="timeline-card glass-card">
+                    <div class="tl-card-header">
+                        <div>
+                            <h3>Asisten Laboratorium & Dosen</h3>
+                            <p class="tl-company">Universitas — Lab Komputer</p>
+                        </div>
+                        <span class="tl-badge">Aktif</span>
+                    </div>
+                    <p class="tl-date"><i class="fa-regular fa-calendar"></i> Web Programming & Network Management</p>
+                    <p class="tl-desc">Membantu dalam proses belajar mengajar praktikum, penilaian tugas mahasiswa, dan pengelolaan infrastruktur jaringan laboratorium.</p>
+                    <div class="tl-skills">
+                        <span>Networking</span><span>Web Dev</span><span>Teaching</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-child">
+                <div class="timeline-connector">
+                    <div class="tl-dot"><i class="fa-solid fa-people-group"></i></div>
+                </div>
+                <div class="timeline-card glass-card">
+                    <div class="tl-card-header">
+                        <div>
+                            <h3>Koordinator KKN-T XLVI</h3>
+                            <p class="tl-company">Kelurahan Botang</p>
+                        </div>
+                        <span class="tl-badge tl-badge-done">Selesai</span>
+                    </div>
+                    <p class="tl-date"><i class="fa-regular fa-calendar"></i> Program Pengabdian Masyarakat</p>
+                    <p class="tl-desc">Memimpin koordinasi program kerja tim untuk pengabdian masyarakat di bidang hortikultura dan pengembangan kapasitas desa.</p>
+                    <div class="tl-skills">
+                        <span>Leadership</span><span>Community Dev</span><span>Coordination</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+        <div class="section-title">
+            <span class="section-label">03 — Project</span>
+            <h2>Project <span class="italic-accent">Unggulan</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="project-grid">
+            <div class="project-card reveal-child">
+                <div class="project-card-inner">
+                    <div class="project-card-front glass-card">
+                        <div class="project-icon-wrap"><i class="fa-solid fa-museum"></i></div>
+                        <h3>Museum Digital Kollo-Kollo</h3>
+                        <p>Sistem informasi interaktif berbasis web untuk manajemen koleksi museum digital dengan UI modern.</p>
+                        <div class="project-tech-row">
+                            <span>Web Dev</span><span>PHP</span><span>MySQL</span>
+                        </div>
+                        <div class="project-hover-hint"><i class="fa-solid fa-rotate"></i> Hover untuk detail</div>
+                    </div>
+                    <div class="project-card-back">
+                        <h3>Museum Digital Kollo-Kollo</h3>
+                        <p>Platform web interaktif yang memungkinkan pengunjung menjelajahi koleksi artefak budaya secara digital. Dilengkapi sistem manajemen konten untuk admin museum.</p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Manajemen koleksi digital</li>
+                            <li><i class="fa-solid fa-check"></i> UI/UX modern & responsif</li>
+                            <li><i class="fa-solid fa-check"></i> Backend PHP + MySQL</li>
+                        </ul>
+                        <div class="project-back-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Lihat Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal-child">
+                <div class="project-card-inner">
+                    <div class="project-card-front glass-card">
+                        <div class="project-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Analisis Wisatawan Toraja Utara</h3>
+                        <p>Prediksi jumlah kunjungan menggunakan metode Principal Component Analysis (PCA) dan Linear Regression.</p>
+                        <div class="project-tech-row">
+                            <span>Data Science</span><span>Python</span><span>PCA</span>
+                        </div>
+                        <div class="project-hover-hint"><i class="fa-solid fa-rotate"></i> Hover untuk detail</div>
+                    </div>
+                    <div class="project-card-back">
+                        <h3>Analisis Wisatawan Toraja Utara</h3>
+                        <p>Studi data science menggunakan teknik machine learning untuk memprediksi tren kunjungan wisatawan ke Toraja Utara, membantu perencanaan pariwisata daerah.</p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Analisis PCA multivariat</li>
+                            <li><i class="fa-solid fa-check"></i> Model prediksi regresi</li>
+                            <li><i class="fa-solid fa-check"></i> Visualisasi data Python</li>
+                        </ul>
+                        <div class="project-back-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder card lebih -->
+            <div class="project-card project-card-cta reveal-child">
+                <div class="glass-card project-cta-inner">
+                    <i class="fa-solid fa-plus cta-icon"></i>
+                    <h3>Project Selanjutnya</h3>
+                    <p>Selalu ada ide baru yang sedang dieksekusi. Stay tuned!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+        <div class="section-title">
+            <span class="section-label">04 — Kontak</span>
+            <h2>Mari <span class="italic-accent">Terhubung</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-info-side reveal-child">
+                <p class="contact-intro">Punya ide project menarik, tawaran kolaborasi, atau sekadar ingin berdiskusi? Saya terbuka untuk semua percakapan!</p>
+                <div class="contact-detail-list">
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <span class="detail-label">WhatsApp</span>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="detail-value">+62 812-3456-7890</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon ig-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div>
+                            <span class="detail-label">Instagram</span>
+                            <a href="https://instagram.com/usernamekamu" target="_blank" class="detail-value">@usernamekamu</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon fb-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div>
+                            <span class="detail-label">Facebook</span>
+                            <a href="https://www.facebook.com/share/1GSXUYGmHQ/" target="_blank" class="detail-value">Antoni Steven Sirande</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="availability-badge">
+                    <span class="avail-dot"></span>
+                    Tersedia untuk kolaborasi & freelance
+                </div>
+            </div>
+
+            <div class="contact-form-side reveal-child">
+                <form id="contact-form" class="contact-form glass-card">
+                    <h3>Kirim Pesan</h3>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Nama Lengkap</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Alamat Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="subject" placeholder=" ">
+                        <label for="subject">Subjek</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Pesan Kamu...</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">
+                        <span class="btn-text">Kirim Pesan</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <div class="form-success" id="form-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Pesan berhasil dikirim! Saya akan segera merespons.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Antoni<span>.</span></div>
+            <p class="footer-tagline">Crafting digital experiences with passion.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com/usernamekamu" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1GSXUYGmHQ/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Antoni Steven Sirande &nbsp;·&nbsp; NIM 222611137</p>
+                <a href="#home" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
